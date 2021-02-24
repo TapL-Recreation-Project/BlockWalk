@@ -1,5 +1,6 @@
 package me.swipez.blockwalk;
 
+import me.swipez.blockwalk.bstats.Metrics;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,7 +17,7 @@ public final class Blockwalk extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new WalkListen(this), this);
         getCommand("blockwalk").setExecutor(new StartCommand(this));
         getCommand("blockwalk").setTabCompleter(new CommandComplete());
-
+        new Metrics(this, 10462);
     }
 
     @Override
