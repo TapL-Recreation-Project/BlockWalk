@@ -1,0 +1,9 @@
+name: BlockWalk
+version: ${project.version}
+main: me.swipez.blockwalk.Blockwalk
+api-version: 1.16
+authors: [ notnotnotswipez ]
+commands:
+  blockwalk:
+    usage: /blockwalk <start/stop>
+    description: Starts and stops the block walk challenge!
