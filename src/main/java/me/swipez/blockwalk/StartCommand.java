@@ -42,6 +42,9 @@ public class StartCommand implements CommandExecutor {
                     p.sendMessage(ChatColor.RED+"/blockwalk <start/stop>");
                 }
             }
+            else {
+                p.sendMessage(ChatColor.RED+"You do not have the required permission to run this command!");
+            }
         }
         else{
             sender.sendMessage(ChatColor.RED+"This command is for players only!");

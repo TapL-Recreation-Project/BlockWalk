@@ -24,7 +24,7 @@ public class WalkListen implements Listener {
             Block b = p.getWorld().getBlockAt(p.getLocation());
             if (plugin.storedloc.get(p.getUniqueId()).getX() != b.getX() || plugin.storedloc.get(p.getUniqueId()).getY() != b.getY() || plugin.storedloc.get(p.getUniqueId()).getZ() != b.getZ()){
                 Block underblock = p.getWorld().getBlockAt(p.getLocation().subtract(0,1,0));
-                if (underblock.getType() != Material.AIR){
+                if (underblock.getType() != Material.AIR && underblock.isLiquid() == false && underblock.getType() != Material.FROSTED_ICE){
                     ItemStack underblockitem = new ItemStack(underblock.getType(), 1);
                     if (underblock.getType() != Material.CAVE_AIR && underblock.getType() != Material.VOID_AIR){
                         if (p.getInventory().firstEmpty() == -1){
